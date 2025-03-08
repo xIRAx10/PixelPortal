@@ -1,194 +1,197 @@
-Pixel Portal
+# Pixel Portal
 
-Descripción
+## Descripción del Proyecto
 
-Pixel Portal es una plataforma de e-commerce y social media dedicada a la compra de videojuegos, sirviendo como intermediario entre desarrolladores, distribuidores y usuarios finales. Además de la adquisición de títulos, la plataforma ofrece herramientas sociales como sistema de amigos, búsqueda de usuarios, comentarios en perfiles y valoraciones de juegos.
+Pixel Portal es una plataforma e-commerce & social media diseñada para la compra de videojuegos. Sirve como intermediario entre desarrolladores, distribuidores y usuarios finales, ofreciendo también herramientas de interacción social como sistema de amigos, comentarios en perfiles y búsqueda de usuarios.
 
-Tecnologías Utilizadas
+Este proyecto responde a la creciente demanda de videojuegos y a la importancia de la interacción social en línea, combinando una tienda de títulos independientes y de gran éxito con una comunidad activa dentro de la plataforma.
 
-Backend
+## Características Principales
 
-Java
+- **Compra y gestión de videojuegos**: Catálogo con títulos de diferentes desarrolladores y distribuidores.
+- **Funciones sociales**: Sistema de amigos, comentarios en perfiles y búsqueda de usuarios.
+- **Sistema de valoraciones y reseñas**: Permite a los usuarios calificar y comentar sobre los juegos adquiridos.
+- **Accesibilidad y usabilidad**: Diseño responsivo para distintos dispositivos y navegadores.
+- **Demo de videojuego**: Ilustración del funcionamiento de la plataforma mediante un título desarrollado para este propósito.
 
-JavaServer Pages (JSP)
+## Tecnologías Utilizadas
 
-Java Servlets
+### Backend
 
-Apache Tomcat
+- **Lenguaje**: Java
+- **Frameworks**: JavaServer Pages (JSP), Java Servlets y Java MVC
+- **Servidor**: Apache Tomcat
+- **Gestión de dependencias**: Maven
 
-Maven para la gestión de dependencias
+### Frontend
 
-Frontend
+- **Lenguajes**: HTML5, CSS, JavaScript
+- **Frameworks y librerías**: Bootstrap, JQuery
 
-HTML5, CSS, Bootstrap
+### Base de Datos
 
-JavaScript, jQuery
+- **Lenguaje**: SQL
+- **Gestor de BD**: MySQL Workbench
+- **Conectividad**: JDBC (Java Database Connectivity)
 
-Base de Datos
+### Herramientas de Desarrollo
 
-MySQL Workbench
+- **Control de versiones**: Git
+- **Entornos de desarrollo**: Eclipse for Java EE Developers, Visual Studio Code
 
-JBDC (Java Database Connectivity)
+# Estructura del Proyecto
 
-Control de Versiones
+## 1. Plataforma E-Commerce
 
-Git
+La plataforma permite a los usuarios:
 
-Entorno de Desarrollo
+- **Registrarse e iniciar sesión.**
+- **Gestión de videojuegos** (visualización, búsqueda, filtrado, adquisición)
+- **Dejar comentarios** en perfiles de otros usuarios.
+- **Sistema de valoraciones** y comentarios.
+- **Perfil de usuario** personalizable con avatar, biografía y amigos
+- **Carrito de compras** y proceso de pago seguro (Visa/PayPal)
+- **Página de soporte** para consultas y problemas
 
-Visual Studio Code
+### 1.1 Modelo de Datos
 
-Eclipse for Java EE Developers
+El diseño de la base de datos prioriza la integridad y escalabilidad con las siguientes relaciones clave:
 
-Características Principales
+- **Usuarios**: Tienen inventarios, amigos, comentarios de perfil, reseñas y publicaciones.
+- **Juegos**: Relacionados con desarrolladores y distribuidores, pueden tener reseñas, posts y pertenecer a inventarios de usuarios.
+- **Carritos**: Asociados a usuarios, contienen juegos antes de la compra final.
 
-Funcionalidades
+## 2. Videojuego-Demo: Turbo Dank Meme Space Shooting
 
-Registro e inicio de sesión
+Un shooter espacial de estilo arcade, accesible vía navegador web.
 
-Gestión de videojuegos (visualización, búsqueda, filtrado, adquisición)
+### 2.1 Requerimientos
 
-Sistema de valoraciones y comentarios
+- Navegador moderno con soporte HTML5.
+- No requiere instalación adicional.
 
-Perfil de usuario personalizable con avatar, biografía y amigos
+### 2.2 Estructura de Archivos
 
-Carrito de compras y proceso de pago seguro (Visa/PayPal)
+- **index.html**: Archivo principal del juego.
+- **workermain.js**: Lógica del juego.
+- **style.css**: Estilos visuales.
+- **data.json**: Configuración del juego.
+- **images/**, **icons/**, **media/**: Recursos multimedia.
 
-Biblioteca de juegos adquiridos
+### 2.3 Controles y Mecánicas
 
-Página de soporte para consultas y problemas
+- Mover la nave y disparar a enemigos.
+- Diferentes tipos de enemigos con niveles de salud.
+- Sistema de puntuación y dificultad balanceada.
 
-Diseño de la Interfaz de Usuario
+## 3. Accesibilidad y Usabilidad
 
-Paleta de Colores
+Se realizaron pruebas con validadores y test de usuario:
 
-Se ha seleccionado una combinación de colores con un estilo synthwave inspirado en los neones de los años 80, con un alto contraste para mejorar la accesibilidad:
+- **Validación W3C**: Cumplimiento de estándares web.
+- **eXaminator**: Puntuación de accesibilidad de 8.32/10.
+- **Test de Usuario**: Evaluación con diferentes perfiles, destacando organización y facilidad de navegación.
+- **Test A/B**: Comparación entre diseños para optimizar la interfaz de usuario.
 
-#2EEAE3
+# 4. Bocetos y Diseño Final
 
-#66B3E8
+## 4.1 Bocetos
 
-#D4B3E2
+Se desarrollaron prototipos iniciales de las siguientes páginas:
 
-#000000 (negro)
+- **Página de inicio**
+- **Carrito de compras**
+- **Biblioteca de juegos**
+- **Formulario de pago**
+- **Interfaz de usuario**
+- **Página de soporte**
 
-#FFFFFF (blanco)
+## 4.2 Diseño Final
 
-#FF30E9 (rosa fucsia)
+### Página de Inicio
 
-Bocetos
+- Muestra todos los juegos con filtros por género y precio.
+- Listado en formato "cards".
+- Opción de añadir juegos al carrito tras autenticación.
 
-Se desarrollaron prototipos iniciales de:
+### Carrito de Compras
 
-Página de inicio
+- Visualización de juegos seleccionados y total de compra.
+- Opción de eliminar productos y proceder al pago.
 
-Carrito de compras
+### Formulario de Pago
 
-Biblioteca de juegos
+- Aceptación de términos y condiciones.
+- Ingreso de datos personales y verificación del email.
+- Pago con tarjeta o PayPal.
 
-Formulario de pago
+### Biblioteca de Juegos
 
-Interfaz de usuario
+- Lista de juegos adquiridos.
+- Opción de jugar, valorar y escribir reseñas.
 
-Página de soporte
+### Perfil de Usuario
 
-Diseño Final
+- Biografía personalizable.
+- Amigos y solicitudes de amistad.
+- Comentarios en perfiles.
+- Subida de avatar.
 
-Página de Inicio
+### Página de Soporte
 
-Muestra todos los juegos con filtros por género y precio.
+- Formulario de contacto con selección de categoría de consulta.
 
-Listado en formato "cards".
-
-Opción de añadir juegos al carrito tras autenticación.
-
-Carrito de Compras
-
-Visualización de juegos seleccionados y total de compra.
-
-Opción de eliminar productos y proceder al pago.
-
-Formulario de Pago
-
-Aceptación de términos y condiciones.
-
-Ingreso de datos personales y verificación del email.
-
-Pago con tarjeta o PayPal.
-
-Biblioteca de Juegos
-
-Lista de juegos adquiridos.
-
-Opción de jugar, valorar y escribir reseñas.
-
-Perfil de Usuario
-
-Biografía personalizable.
-
-Amigos y solicitudes de amistad.
-
-Comentarios en perfiles.
-
-Subida de avatar.
-
-Página de Soporte
-
-Formulario de contacto con selección de categoría de consulta.
-
-Arquitectura
+## 4.3 Arquitectura
 
 Se sigue una arquitectura Modelo-Vista-Controlador (MVC), con:
 
-Modelo: Representa los datos en la base de datos.
+- **Modelo**: Representa los datos en la base de datos.
+- **Vista**: Archivos JSP con HTML, CSS y JavaScript.
+- **Controlador**: Servlets que manejan la lógica del backend.
+- **DAO (Data Access Objects)**: Acceso estructurado a la base de datos.
 
-Vista: Archivos JSP con HTML, CSS y JavaScript.
+## 5. Conclusiones
 
-Controlador: Servlets que manejan la lógica del backend.
+El proyecto ha permitido el aprendizaje y aplicación de tecnologías web y desarrollo de videojuegos, superando retos técnicos en seguridad, accesibilidad y optimización. Aunque se han alcanzado los objetivos, hay mejoras pendientes como:
 
-DAO (Data Access Objects): Acceso estructurado a la base de datos.
+- Despliegue en servidor externo.
+- Chat en tiempo real.
+- Implementación de pasarela de pago funcional.
+- Autenticación mediante doble factor.
 
-Instalación y Ejecución
+## 6. Instalación y Ejecución
 
-Prerrequisitos
+### Prerrequisitos
 
-Java 11+
+- **Java 11+**
+- **Apache Tomcat 9+**
+- **MySQL Workbench**
+- **Maven**
+- **IDE** (Eclipse o Visual Studio Code)
 
-Apache Tomcat 9+
+### 7. Pasos para la Instalación
 
-MySQL Workbench
 
-Maven
+1. Clonar el repositorio:
+   ```bash
+   git clone https://github.com/tu_usuario/PixelPortal.git
+   ```
+   
+2. Configurar la base de datos en MySQL Workbench.
 
-IDE (Eclipse o Visual Studio Code)
+3. Configurar Apache Tomcat.
 
-Pasos para la Instalación
+4. Ejecutar el proyecto desde el IDE.
 
-Clonar el repositorio:
 
-git clone https://github.com/tu_usuario/PixelPortal.git
+## 8. Bibliografía y Recursos
 
-Configurar la base de datos en MySQL Workbench.
+- **Video Tutorial Construct 3**: YouTube
+- **Documento Tutorial Juego de Naves**: Calameo
+- **Estándares Web y Accesibilidad**: W3C
+- **Validadores de HTML y Accesibilidad**: [W3C Validator](https://validator.w3.org) | [eXaminator](https://www.examinator.com)
+- **Recursos de Diseño**: [Google Fonts](https://fonts.google.com) | [Bootstrap Icons](https://icons.getbootstrap.com)
+- **Backend y MVC en Java**: [JSP en JavaTpoint](https://www.javatpoint.com)
 
-Configurar Apache Tomcat.
 
-Ejecutar el proyecto desde el IDE.
-
-Contribución
-
-Si deseas contribuir al proyecto, sigue estos pasos:
-
-Haz un fork del repositorio.
-
-Crea una rama para tu nueva funcionalidad (git checkout -b feature/nueva-funcionalidad).
-
-Realiza tus cambios y confirma los cambios (git commit -m 'Agrega nueva funcionalidad').
-
-Sube los cambios (git push origin feature/nueva-funcionalidad).
-
-Abre un Pull Request.
-
-Licencia
-
-Este proyecto se distribuye bajo la licencia MIT. Ver LICENSE para más información.
 
