@@ -1,0 +1,63 @@
+---------- INSTRUCCIONES INSTALACIÓN Y DESPLIEGUE ----------
+
+
+
+
+
+>>>>>>>>>>NOTA PRELIMINAR: SE REQUIERE DE CONEXIÓN A INTERNET EN TODO MOMENTO PARA EL CORRECTO FUNCIONAMIENTO DEL PROYECTO.<<<<<<<<<
+						
+						PARA EL INICIO DEL VIDEOJUEGO TURBO DANK MEME SPACE SHOOTER ES VITAL CONSULTAR EL ARCHIVO README.TXT
+						PRESENTE EN LA CARPETA turbodank SITUADA EN LA RAÍZ DEL PROYECTO.
+
+
+
+
+Para la correcta instalación y despliegue local del presente proyecto se requiere lo siguiente:
+
+
+1. Disponer de la base de datos utilizada, que ha sido configurada mediante PostGreSQL/MySQL en su versión 8.0 con MySQL Workbench.
+2. Servidor Apache Tomcat en su versión 9.0.86
+3. Eclipse for Java EE Developers - 2024/03
+
+
+Una vez se disponga de dichos elementos se ha de establecer la conexión con la base de datos en el archivo para tal efecto DatabaseConnection.java:
+
+jdbc:mysql://127.0.0.1:3306 siendo por defecto la conexión en local.
+
+Es crítico verificar que se dispone de los archivos .jar, que configuran las librerías en el archivo pom.xml.
+
+En el presente proyecto son:
+
+	<dependencies>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.11</version>
+		</dependency>
+		<dependency>
+			<groupId>org.mindrot</groupId>
+			<artifactId>jbcrypt</artifactId>
+			<version>0.4</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+	</dependencies>
+
+Con ello y con todo, tras haber limpiado el proyecto y haber reconstruido, la página web se abrirá en el navegador designado para tal efecto.
+
+
+NOTA PRELIMINAR: SE REQUIERE DE CONEXIÓN A INTERNET EN TODO MOMENTO PARA EL CORRECTO FUNCIONAMIENTO DEL PROYECTO.
